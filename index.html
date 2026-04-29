@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hand Art — Hệ thống quản lý lớp học</title>
@@ -804,6 +805,16 @@ body{font-family:'Be Vietnam Pro',sans-serif;background:var(--bg);color:var(--te
 
 <script>
 // ========== DATA ==========
+// ── Supabase config ──
+const SUPABASE_URL = 'https://cfcyfqhfigejvjqgfdeo.supabase.co';
+const SUPABASE_KEY = 'eyJ...[eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNmY3lmcWhmaWdlanZqcWdmZGVvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzczODE0MTQsImV4cCI6MjA5Mjk1NzQxNH0.znlrNvmEQtMPZKUFFqCIskAlVekm7ZERCuDJhYctOhc]...';
+
+// Import Supabase client (thêm vào <head> của HTML):
+// <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2">
+// </script>
+
+const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
 const USERS=[
   {u:'giaovien1',p:'123456',role:'teacher',name:'Nguyễn Thị Lan',av:'NL'},
   {u:'giaovien2',p:'123456',role:'teacher',name:'Trần Minh Quân',av:'TQ'},
